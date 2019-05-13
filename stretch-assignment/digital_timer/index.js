@@ -19,7 +19,7 @@ function alertFunc() {
     msh.style.color = "red";
     so.style.color = "red";
     st.style.color = "red";
-    prog.style.color = "red";
+    prog.style.backgroundColor = "red";
   }
 
   console.log(char);
