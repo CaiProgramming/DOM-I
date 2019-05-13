@@ -12,3 +12,8 @@ body {
 .redDigit {
   color: red;
 }
+.progress{
+  width: 0px;
+  height: 10px;
+  background-color: green;
+}

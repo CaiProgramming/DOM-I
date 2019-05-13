@@ -3,6 +3,7 @@ let counter = setInterval(alertFunc, 10);
 
 function alertFunc() {
   console.log((count += 1));
+
   let char = count
     .toString()
     .split("")
@@ -11,6 +12,14 @@ function alertFunc() {
   let msh = document.querySelector("#msHundreds");
   let so = document.querySelector("#secondOnes");
   let st = document.querySelector("#secondTens");
+
+  if (count > 700) {
+    ms.style.color = "red";
+    msh.style.color = "red";
+    so.style.color = "red";
+    st.style.color = "red";
+  }
+
   console.log(char);
   ms.textContent = char[0];
   if (char[1]) msh.textContent = char[1];
