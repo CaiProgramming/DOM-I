@@ -12,12 +12,14 @@ function alertFunc() {
   let msh = document.querySelector("#msHundreds");
   let so = document.querySelector("#secondOnes");
   let st = document.querySelector("#secondTens");
-
+  let prog = document.querySelector("body > div.progress");
+  prog.style.width = `${count}px`;
   if (count > 700) {
     ms.style.color = "red";
     msh.style.color = "red";
     so.style.color = "red";
     st.style.color = "red";
+    prog.style.color = "red";
   }
 
   console.log(char);
