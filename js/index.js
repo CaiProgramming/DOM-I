@@ -46,13 +46,50 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// create a new div element
+/////////////////////////////////////////////////
 let nav = document.querySelector("header nav");
 let nava = document.querySelectorAll("header nav a");
 for (i = 0; i < nava.length; i++) {
   nava[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
 }
+//////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////
 let cta = document.getElementsByClassName("cta");
-console.log(cta[0].childNodes);
-cta[0].childNodes[0].textContent = "asd";
+console.log(cta[0].childNodes[3].src);
+cta[0].childNodes[1].childNodes[2].textContent = siteContent["cta"][`h1`];
+cta[0].childNodes[1].childNodes[3].innerText = siteContent["cta"][`button`];
+cta[0].childNodes[3].src = siteContent["cta"]["img-src"];
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+
+let main = document.getElementsByClassName("main-content");
+console.log(main[0].childNodes[5].childNodes);
+///////////////////// FEATURES ////////////////////////////
+main[0].childNodes[1].childNodes[1].childNodes[1].textContent =
+  siteContent["main-content"][`features-h4`];
+main[0].childNodes[1].childNodes[1].childNodes[3].textContent =
+  siteContent["main-content"][`features-content`];
+///////////////////// ABOUT //////////////////////////////
+main[0].childNodes[1].childNodes[3].childNodes[1].textContent =
+  siteContent["main-content"][`about-h4`];
+main[0].childNodes[1].childNodes[3].childNodes[3].textContent =
+  siteContent["main-content"][`about-content`];
+//////////////////// MIDDLE IMG ///////////////////////////
+main[0].childNodes[3].src = siteContent["main-content"][`middle-img-src`];
+//////////////////// SERVICES ///////////////////////////////
+main[0].childNodes[5].childNodes[1].childNodes[1].textContent =
+  siteContent["main-content"][`services-h4`];
+main[0].childNodes[5].childNodes[1].childNodes[3].textContent =
+  siteContent["main-content"][`services-content`];
+//////////////////// PRODUCTS ///////////////////////////////
+main[0].childNodes[5].childNodes[3].childNodes[1].textContent =
+  siteContent["main-content"][`product-h4`];
+main[0].childNodes[5].childNodes[3].childNodes[3].textContent =
+  siteContent["main-content"][`product-content`];
+//////////////////// visions ///////////////////////////////
+main[0].childNodes[5].childNodes[5].childNodes[1].textContent =
+  siteContent["main-content"][`vision-h4`];
+main[0].childNodes[5].childNodes[5].childNodes[3].textContent =
+  siteContent["main-content"][`vision-content`];
