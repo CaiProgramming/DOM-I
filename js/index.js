@@ -49,47 +49,79 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 /////////////////////////////////////////////////
 let nav = document.querySelector("header nav");
 let nava = document.querySelectorAll("header nav a");
-for (i = 0; i < nava.length; i++) {
-  nava[i].textContent = siteContent["nav"][`nav-item-${i + 1}`];
+nava[0].prepend(siteContent["nav"][`nav-item-1`]);
+nava[0].style.color = "green";
+for (i = 1; i < nava.length; i++) {
+  let na = document.createTextNode(siteContent["nav"][`nav-item-${i + 1}`]);
+  nava[i].appendChild(na);
+  nava[i].style.color = "green";
 }
 //////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////  CTA  ////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 let cta = document.getElementsByClassName("cta");
 console.log(cta[0].childNodes[3].src);
-cta[0].childNodes[1].childNodes[2].textContent = siteContent["cta"][`h1`];
+cta[0].childNodes[1].childNodes[1].textContent = siteContent["cta"][`h1`];
 cta[0].childNodes[1].childNodes[3].innerText = siteContent["cta"][`button`];
 cta[0].childNodes[3].src = siteContent["cta"]["img-src"];
 /////////////////////////////////////////////////////////
-
 /////////////////////////////////////////////////////////
-
+//////////////////////// MAIN ///////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 let main = document.getElementsByClassName("main-content");
-console.log(main[0].childNodes[5].childNodes);
+
 ///////////////////// FEATURES ////////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[1].childNodes[1].childNodes[1].textContent =
   siteContent["main-content"][`features-h4`];
 main[0].childNodes[1].childNodes[1].childNodes[3].textContent =
   siteContent["main-content"][`features-content`];
 ///////////////////// ABOUT //////////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[1].childNodes[3].childNodes[1].textContent =
   siteContent["main-content"][`about-h4`];
 main[0].childNodes[1].childNodes[3].childNodes[3].textContent =
   siteContent["main-content"][`about-content`];
 //////////////////// MIDDLE IMG ///////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[3].src = siteContent["main-content"][`middle-img-src`];
 //////////////////// SERVICES ///////////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[5].childNodes[1].childNodes[1].textContent =
   siteContent["main-content"][`services-h4`];
 main[0].childNodes[5].childNodes[1].childNodes[3].textContent =
   siteContent["main-content"][`services-content`];
 //////////////////// PRODUCTS ///////////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[5].childNodes[3].childNodes[1].textContent =
   siteContent["main-content"][`product-h4`];
 main[0].childNodes[5].childNodes[3].childNodes[3].textContent =
   siteContent["main-content"][`product-content`];
 //////////////////// visions ///////////////////////////////
+/////////////////////////////////////////////////////////
 main[0].childNodes[5].childNodes[5].childNodes[1].textContent =
   siteContent["main-content"][`vision-h4`];
 main[0].childNodes[5].childNodes[5].childNodes[3].textContent =
   siteContent["main-content"][`vision-content`];
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////// CONTACT /////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+let contact = document.getElementsByClassName("contact");
+
+contact[0].childNodes[1].textContent = siteContent["contact"][`contact-h4`];
+contact[0].childNodes[3].textContent = siteContent["contact"][`address`];
+contact[0].childNodes[5].textContent = siteContent["contact"][`phone`];
+contact[0].childNodes[7].textContent = siteContent["contact"][`email`];
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////// footer  /////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+let footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"][`copyright`];
